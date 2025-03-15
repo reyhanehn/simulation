@@ -1,8 +1,4 @@
--- User Table
-CREATE TABLE "User" (
-  "User_ID" BIGSERIAL PRIMARY KEY,
-  "Phone_Number" VARCHAR(15) UNIQUE CHECK (
-      "Phone_Number" ~ '^\+989\d{2}\d{7}$' OR "Phone_Number" IS NULL
+
   ),
   "Email" VARCHAR(100) UNIQUE CHECK (
       "Email" ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$' OR "Email" IS NULL
